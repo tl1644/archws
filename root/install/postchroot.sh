@@ -6,11 +6,4 @@ function sysconfig {
 }
 
 sysconfig checkout
-if [ $? = 0 ]; then
-  echo "Checked out config.";
-  else
-    echo "Deleting pre-existing files.";
-    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} rm {} 
-fi;
-sysconfig checkout
 sysconfig config status.showUntrackedFiles no
