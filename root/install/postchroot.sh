@@ -7,3 +7,16 @@ function sysconfig {
 
 sysconfig checkout
 sysconfig config status.showUntrackedFiles no
+
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+locale-gen
+
+systemctl enable NetworkManager.service
+
+mkinitcpio -p linux
+
+grub-mkconfig -o /boot/grub/grub.cfg
+grub-install --target=i386-pc /dev/sda
+
+passwd
+
