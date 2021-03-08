@@ -1,0 +1,11 @@
+base
+base-devel
+linux
+linux-firmware
+mc
+nano
+neovim
+networkmanager
+openssh
+wget
+git
