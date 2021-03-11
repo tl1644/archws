@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir /root/sysconfig
 git clone --bare https://github.com/tl1644/archws.git /root/sysconfig
 
@@ -14,9 +15,6 @@ locale-gen
 systemctl enable NetworkManager.service
 
 mkinitcpio -p linux
-
-grub-mkconfig -o /boot/grub/grub.cfg
-grub-install --target=i386-pc /dev/sda
 
 passwd
 
