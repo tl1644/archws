@@ -10,3 +10,5 @@ openssh
 wget
 git
 grub
+sudo
+rust
