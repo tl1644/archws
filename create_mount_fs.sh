@@ -25,4 +25,4 @@ mount -o compress=zstd:1,noatime,subvol=@cache ${SYSPART} /mnt/var/cache
 mount -o compress=zstd:1,noatime,subvol=@log ${SYSPART} /mnt/var/log
 mount -o compress=zstd:1,noatime,subvol=@images ${SYSPART} /mnt/var/lib/libvirt/images
 
-mount BOOTPART=${1} /mnt/boot/efi
+mount ${BOOTPART} /mnt/boot/efi

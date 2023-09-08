@@ -1,6 +1,6 @@
 #/usr/bin/env bash
 
-pacstrap -K /mnt base base-devel git linux linux-firmware nano openssh reflector rsync
+pacstrap -K /mnt base linux linux-firmware reflector
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
