@@ -22,7 +22,6 @@ echo KEYMAP=de-latin1 > /etc/vconsole.conf
 
 # hostname
 echo testro > /etc/hostname
-
 cat > /etc/hosts <<EOF
 127.0.0.1   localhost
 ::1         localhost
