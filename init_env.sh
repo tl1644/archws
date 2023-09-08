@@ -15,6 +15,7 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 
 # packman
 reflector --country DE --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+cp files/pacman.conf /etc
 pacman -Syy
 
 # console
