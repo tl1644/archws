@@ -3,7 +3,7 @@
 pacman --needed --noconfirm -S \
     exfat-utils ntfs-3g \
     nano grub efibootmgr \
-    mc sudo
+    mc sudo snapper
 
 cp files/sudoers /etc
 
