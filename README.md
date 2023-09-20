@@ -29,3 +29,20 @@ pacman -S git
 ```shell
 git clone https://github.com/tl1644/archws
 ```
+
+```shell
+cd archws
+./prep_disk.sh /dev/vda
+./prep_disk.sh /dev/nvme0n1p
+
+./create_mount_fs.sh <boot-part> <sys-part>
+
+./base_install.sh
+
+./init_env.sh
+
+./pkg_base.sh
+./pkg_net.sh
+./pkg_dev.sh
+./pkg_gnome.sh
+```
