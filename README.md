@@ -45,4 +45,8 @@ cd archws
 ./pkg_net.sh
 ./pkg_dev.sh
 ./pkg_gnome.sh
+
+./create_user.sh <username>
+
+passwd
 ```

@@ -9,7 +9,13 @@ pacman --needed --noconfirm -S \
     gnupg pass man pipewire pipewire-docs pipewire-pulse pamixer pulsemixer \
     bzip2 gzip lrzip lz4 lzip lzop xz libarchive cpio p7zip unrar zip unzip
 
-cp files/sudoers /etc
+# cp files/sudoers /etc
+
+echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/wheel
+
+#umount /.snapshots
+#rm -rf /.snapshots
+chown -R :wheel /.snapshots
 
 systemctl enable reflector.timer
 systemctl enable fstrim.timer

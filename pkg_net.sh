@@ -5,6 +5,6 @@ pacman --needed --noconfirm -S \
     net-tools netctl whois wget openssh
 
 systemctl enable NetworkManager
-systemctl enable avahi-deamon
+systemctl enable avahi-daemon
 systemctl enable firewalld.service
 #systemctl enable sshd
