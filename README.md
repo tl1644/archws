@@ -7,7 +7,7 @@ loadkeys de-latin1
 ```
 
 ```shell
-reflector --country DE --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+reflector --country DE --latest 5 --sort rate --exclude archlinux.thaller.ws --save /etc/pacman.d/mirrorlist
 ```
 
 ```shell

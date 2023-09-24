@@ -1,6 +1,6 @@
 #/usr/bin/env bash
 
-pacstrap -K /mnt base linux linux-firmware reflector rsync
+pacstrap -K /mnt base linux linux-firmware reflector rsync btrfs-progs
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
