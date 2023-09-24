@@ -28,3 +28,8 @@ cat > /etc/hosts <<EOF
 ::1         localhost
 127.0.1.1   testro.localdomain   testro
 EOF
+
+# btrfs change default for / from 5 to 256
+btrfs subvol set-default 256 /
+
+cp files/mkinitcpio.conf /etc/

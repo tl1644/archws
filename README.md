@@ -21,7 +21,7 @@ nano /etc/pacman.conf
 timedatectl status
 ```
 
-```shell
+```shell.
 pacman -Syy
 pacman -S git
 ```
@@ -48,5 +48,11 @@ cd archws
 
 ./create_user.sh <username>
 
+./aur.sh
+./make_bootable.sh
+
 passwd
+exit
+umount -a
+reboot
 ```
