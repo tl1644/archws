@@ -29,6 +29,16 @@ cat > /etc/hosts <<EOF
 127.0.1.1   testro.localdomain   testro
 EOF
 
+# reflector config
+cat > /etc/xdg/reflector/reflector.conf <<EOF
+--country DE
+--latest 5
+--sort rate
+--exclude archlinux.thaller.ws
+--save /etc/pacman.d/mirrorlist
+EOF
+systemctl enable reflector.timer
+
 # btrfs change default for / from 5 to 256
 btrfs subvol set-default 256 /
 

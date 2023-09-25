@@ -12,14 +12,11 @@ pacman --needed --noconfirm -S \
 
 echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/wheel
 
-#umount /.snapshots
-#rm -rf /.snapshots
 chown -R :wheel /.snapshots
 #mkdir /etc/snapper/configs
 cp files/root /etc/snapper/configs
 cp files/snapper /etc/conf.d
 
-systemctl enable reflector.timer
 systemctl enable fstrim.timer
 systemctl enable grub-btrfsd
 systemctl enable gpm.service

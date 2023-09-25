@@ -50,7 +50,11 @@ cd archws
 
 ./aur.sh
 ./make_bootable.sh
+```
 
+
+Exit installation enviorenment and reboot
+```shell
 passwd
 exit
 umount -a
