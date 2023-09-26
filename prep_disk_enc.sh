@@ -14,7 +14,7 @@ cryptsetup luksFormat --type luks1 ${SYSPART}
 cryptsetup open ${SYSPART} cryptroot
 
 fs_uuid=$(blkid -o value -s UUID ${SYSPART})
-sed -i "s/<<<DUMMY>>>/cryptdevice=UUID=${fs_uuid}:cryptroot cryptkey=rootfs:/root/cryptpart.keyfile" files/grub
+sed -i "s|<<<DUMMY>>>|cryptdevice=UUID=${fs_uuid}:cryptroot cryptkey=rootfs:/root/cryptpart.keyfile|g" files/grub
 
 dd bs=512 count=4 if=/dev/random of=/root/cryptpart.keyfile iflag=fullblock
 chmod 000 /root/cryptpart.keyfile
