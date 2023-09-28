@@ -11,7 +11,8 @@ EOF
 
 locale-gen
 
-echo LANG=en_US.UTF-8 > /etc/locale.conf
+#echo LANG=en_US.UTF-8 > /etc/locale.conf
+echo LANG=de_DE.UTF-8 > /etc/locale.conf
 
 # packman
 reflector --country DE --latest 5 --sort rate --exclude archlinux.thaller.ws --save /etc/pacman.d/mirrorlist
@@ -40,7 +41,7 @@ EOF
 systemctl enable reflector.timer
 
 # disable root account
-#passwd -l root
+passwd -l root
 
 # btrfs change default for / from 5 to 256
 btrfs subvol set-default 256 /
