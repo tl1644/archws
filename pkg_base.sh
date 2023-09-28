@@ -7,7 +7,7 @@ pacman --needed --noconfirm -S \
     nano neovim \
     mc sudo snapper grub-btrfs inotify-tools locate lshw bat tmux screen fish gpm \
     gnupg pass man pipewire pipewire-docs pipewire-pulse pamixer pulsemixer \
-    bzip2 gzip lrzip lz4 lzip lzop xz libarchive cpio p7zip unrar zip unzip zram-genterator
+    bzip2 gzip lrzip lz4 lzip lzop xz libarchive cpio p7zip unrar zip unzip zram-generator
 
 cat > /etc/systemd/zram-generator.conf <<EOF
 [zram0]

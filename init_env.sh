@@ -39,6 +39,9 @@ cat > /etc/xdg/reflector/reflector.conf <<EOF
 EOF
 systemctl enable reflector.timer
 
+# disable root account
+#passwd -l root
+
 # btrfs change default for / from 5 to 256
 btrfs subvol set-default 256 /
 
